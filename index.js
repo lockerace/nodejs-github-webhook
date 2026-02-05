@@ -1,7 +1,7 @@
 const fs = require('fs');
 const express = require('express');
 const crypto = require('crypto');
-const { exec } = require('child_process'); // Import execFile
+const { exec } = require('child_process');
 
 function checkSignature(signature, config, body) {
   if (!signature) {
@@ -60,7 +60,7 @@ function processUpdate(req, res, config, githubEvent) {
 
 function start() {
   const app = express();
-  const port = 3000;
+  const port = process.env.PORT || 3000;
 
   app.use(express.json());
 
