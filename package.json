@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-github-webhook",
+  "version": "1.0.0",
+  "description": "Node.js Github webhook with configuration",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lockerace/nodejs-github-webhook.git"
+  },
+  "author": "lockerace@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

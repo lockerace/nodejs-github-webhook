@@ -1,0 +1,22 @@
+{
+  "secret": "secret",
+  "pingBranch": "main",
+  "logFile": "webhook.log",
+  "repos": [
+    {
+      "branch": "github-username/repository-name/branch-name",
+      "name": "repo_name",
+      "gitRoot": "~/public_html",
+      "cmds": [
+        "git stash",
+        "git pull origin main 2>&1",
+        "git stash pop",
+        "composer install --no-interaction 2>&1",
+        "php artisan migrate 2>&1",
+        "php artisan config:cache 2>&1",
+        "php artisan config:clear 2>&1",
+        "php artisan cache:clear 2>&1"
+      ]
+    }
+  ]
+}
