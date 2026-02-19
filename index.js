@@ -52,7 +52,7 @@ function processUpdate(req, res, config, githubEvent) {
     }
   }
   if (!found) {
-    return res.status(404).send("Not found")
+    return res.status(204).send("Not found")
   } else {
     return
   }
