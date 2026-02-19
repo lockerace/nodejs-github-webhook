@@ -62,7 +62,7 @@ function start() {
   const app = express();
   const port = process.env.PORT || 3000;
 
-  app.use(express.json());
+  app.use(express.json({ limit: process.env.APP_UPLOAD_LIMIT || '5mb' }));
 
   app.post('/', (req, res) => {
     fs.readFile('webhook-config.json', 'utf8', function (err, data) {
